@@ -55,7 +55,7 @@ server.delete('/api/users/:id', (request, response) => {
 });
 
 server.put('/api/users/:id', (request, response) => {
-    const id = request.params;
+    const id = request.params.id;
     const changes = request.body;
 
     Users.update(id, changes)
